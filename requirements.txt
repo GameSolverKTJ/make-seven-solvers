@@ -1,0 +1,3 @@
+# Install a CPU or CUDA PyTorch build appropriate for your environment.
+torch>=2.1
+numpy>=1.24

@@ -1,0 +1,13 @@
+Verified 2026-10-15, Python 3.12, PyTorch 2.14.1+cpu.
+- Uploaded and bundled best.pt SHA-256 match exactly.
+- All Python sources parse successfully.
+- test_unlimited_release.py passes: fifth 3 accepted under unlimited rules,
+  rejected under the historical four-3 cap; non-red placement remains illegal;
+  unlimited supply input planes; CLI defaults and rejection of three_only;
+  strict checkpoint load; finite CPU predictions; PUCT and Gumbel legal searches.
+- Existing test_game.py passes, including 2,000 random playouts.
+  Database replay skipped because that external database is not bundled.
+- final_opening_evaluator.py runs end-to-end on CPU with the unchanged gen73
+  checkpoint, opening 2A, budget 8, 2 repeats, no PV, default unlimited rules.
+  This is a smoke test only, not a strength benchmark or opening proof.
+- No training performed. No GPU benchmark or unlimited-ruleset accuracy measured.

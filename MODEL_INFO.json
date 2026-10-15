@@ -1,0 +1,20 @@
+{
+  "board": [
+    7,
+    7
+  ],
+  "runtime_rules": {
+    "tile_supply": "unlimited for both players: 1, 2, 3",
+    "three_placement": "red squares only"
+  },
+  "checkpoint": "weights/best.pt",
+  "checkpoint_sha256": "a65eb0d45670e4023b850b7f320e1caf7dbb1493e16ea07a2731af005abc1c66",
+  "checkpoint_generation": 73,
+  "weights_modified": false,
+  "training_rules": {
+    "attached_config_tile_limits": "three_only",
+    "note": "Historical supplied config says 52 generations; checkpoint says 73. Full training provenance is not verified."
+  },
+  "checkpoint_recorded_holdout_auc": 0.9333438260006618,
+  "validation_note": "Recorded metrics have not been re-evaluated under unlimited rules. provenance/best_validation_gen52.json refers to a different checkpoint."
+}
