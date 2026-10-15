@@ -1,0 +1,10 @@
+{
+  "solver": "DF-PN v9.8.3",
+  "source_archive": "Make-Seven-DFPN-v9.8.3-Campaign-v1.14-Exact-Lemma-Measure-Linux-FIXED(1).zip",
+  "source_file": "dfpn_solver_v9_8_3.c",
+  "sha256": "4e7a1f2e8cd9dc67af39d0e962da8778c3ab6784992449cfeb4ddc4eeacff946",
+  "solver_source_modified": false,
+  "launcher_rows": 7,
+  "launcher_threads": 1,
+  "tile_supply": "unlimited 1, 2, 3; 3 only on red squares"
+}

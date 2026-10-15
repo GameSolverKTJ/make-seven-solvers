@@ -1,0 +1,13 @@
+Verified 2026-10-15 on Linux with GCC.
+C source unchanged; SHA-256 matches the supplied v9.8.3 source.
+Built with -O3 -std=c2x -Wall -Wextra -fopenmp.
+Built-in self-test PASSED:
+  108343 candidate moves; 315 double-threat; 988 forced-defense;
+  24 near-end DF-PN positions compared with exhaustive minimax.
+Launcher shell syntax PASSED.
+7x7, threads=1, GREEN perspective, no external exact DB:
+  2A1G2A1G2A1F -> WIN, exit 0; CSV says WIN.
+  2A with a 0.1-second limit -> UNKNOWN, exit 4; CSV says UNKNOWN.
+Results are saved in a new directory for each invocation.
+The prior multi-thread correctness report has not been reproduced or fixed.
+No claim of complete solution for the 7x7 opening position.
