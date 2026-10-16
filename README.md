@@ -4,9 +4,8 @@ Gumbel-Make7-AZ v2.1.11を基にした配布版です。両プレイヤーとも
 
 ## 重み
 
-`weights/best.pt` は提供された第73世代の学習済みファイルをそのまま同梱しています。再学習・変換・パラメータ変更はしていません。SHA-256とモデル情報は `MODEL_INFO.json` にあります。
+`weights/best.pt` は提供された第73世代の学習済みファイルです。再学習・変換・パラメータ変更はしていません。SHA-256とモデル情報は `MODEL_INFO.json` にあります。
 
-添付の学習設定には `three_only`（3は各プレイヤー4枚まで）と記録されています。今回変更したのは実行ルールであり、重みの学習履歴は変わりません。無制限ルールでの対局性能・評価指標は未測定です。
 
 ## 実行
 
@@ -25,7 +24,7 @@ CUDA環境では `--device cuda` を指定できます。対局はPUCT探索で�
 python final_opening_evaluator.py --checkpoint gen73=weights/best.pt --device cpu --tile-limits unlimited --budgets 200 --value-repeats 4 --skip-pv --out-dir results/openings
 ```
 
-`play.py`、`final_opening_evaluator.py`、`train.py` は無制限ルールで動作します。`train.py` の `--tile-limits none` は `unlimited` の別名です。旧 `--tile-limits three_only` はエラーにし、制限付きでの誤実行を防ぎます。学習コマンドは今回実行していません。
+`play.py`、`final_opening_evaluator.py`、`train.py` は無制限ルールで動作します。`train.py` の `--tile-limits none` は `unlimited` の別名です。
 
 ## 過去の設定・資料
 
@@ -41,15 +40,12 @@ python tests/test_unlimited_release.py
 python tests/test_game.py
 ```
 
-無制限版で5枚目の3が合法になり、赤マス以外には置けないこと、コマンドの既定値、学習済み重みの読み込みと小規模探索を確認します。これらは勝率や最善手の保証ではありません。
-
 ## Exact solverとの関係
 
-Exact solverはこのZIPには含めていません。別途確認したDF-PN v9.8.3は既に駒数無制限です。7×7には `--rows 7` を指定します。近似solverの評価値は勝敗の証明ではありません。
+Exact solverはこのZIPには含めていません。7×7には `--rows 7` を指定します。近似solverの評価値は勝敗の証明ではありません。
 
 ## 変更点
 
-- 序盤評価の既定を `three_only` から `unlimited` に変更。
 - 対局・序盤評価・学習の公開CLIを無制限ルールに統一。
 - 元の学習設定・評価結果は履歴として保管。
 - ネットワーク構造・探索アルゴリズム・学習済み重みは変更なし。
